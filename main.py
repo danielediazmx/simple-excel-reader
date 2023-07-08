@@ -4,6 +4,7 @@ import requests
 import json
 
 filename = sys.argv[1]
+g_key = sys.argv[2]
 wb_obj = openpyxl.load_workbook(filename)
 
 sheet_obj = wb_obj.active
@@ -31,7 +32,7 @@ def get_address_from_data(json_data, row):
 
 def get_info_from_gapi(latitud, longitud, row):
     api_result = requests.get(
-        "https://maps.google.com/maps/api/geocode/json?latlng=" + latitud + "," + longitud + "&key=",
+        "https://maps.google.com/maps/api/geocode/json?latlng=" + latitud + "," + longitud + "&key=" + g_key,
         stream=True).raw.data
     json_object = json.loads(api_result)
 
