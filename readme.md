@@ -7,4 +7,7 @@ Script simple de lectura y escritura de un excel, este script toma la latitud y 
 pip install -r requirements.txt
 ## Uso
 
-python manage.py excel.xlsx api_key
+Agregar los excels a leer y convertir en la carpeta llamada "excels"
+
+Ejecutar el comando:
+python manage.py api_key
