@@ -62,5 +62,6 @@ class excelTransformer:
 
 folder = pathlib.Path("./excels")
 for item in folder.iterdir():
-    exc = excelTransformer(f"{item}", sys.argv[1])
-    exc.read_excel()
+    if '.xlsx' in str(item):
+        exc = excelTransformer(f"{item}", sys.argv[1])
+        exc.read_excel()
