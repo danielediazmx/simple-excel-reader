@@ -52,7 +52,7 @@ class excelTransformer:
                 latitud = str(latitud.value)
                 longitud = str(longitud.value)
 
-                if self.isMultiple(i, 500):
+                if self.isMultiple(i, 50):
                     self.wb_obj.save(self.filename)
 
                 self.get_info_from_gapi(latitud, longitud, i)
